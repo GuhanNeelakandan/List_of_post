@@ -42,7 +42,7 @@ interface TableOption {
       image: "",
     });
   
-    const [tableOption, setTableOption] = useState<TableOption>({
+    const [tableOption] = useState<TableOption>({
       search: "",
       skip: 0,
       limit: 10,
