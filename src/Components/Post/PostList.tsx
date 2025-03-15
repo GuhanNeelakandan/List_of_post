@@ -67,7 +67,7 @@ interface TableOption {
   
     useEffect(() => {
         if (tableOption) {
-            dispatch(fetchAllPostList(tableOption)); // No need for extra object nesting
+            dispatch(fetchAllPostList(tableOption)); 
           }
     }, [dispatch,tableOption]);
   
