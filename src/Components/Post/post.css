@@ -1,0 +1,106 @@
+#mainPurpleBtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 20px 8px 45px;
+    min-width: auto;
+    max-width: auto;
+    background: none;
+    color: #5837d0;
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    white-space: nowrap;
+    line-height: 1.25;
+    min-height: 38px;
+    max-height: 38px;
+    font-size: 13px;
+  }
+
+#mainPurpleBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% - 30px);
+    background: url('../../images/icons/btnPlusPurple.svg');
+    width: 13px;
+    height: 13px;
+    background-size: cover;
+  }
+  
+  #mainPurpleBtn:hover::before {
+    background: url('../../images/icons/btnPlusWhite.svg');
+  }
+  
+  #mainPurpleBtn:hover {
+    color: var(--white);
+    background: #5837d0;
+    border-color: transparent;
+  }
+  
+  #mainPurpleBtn:focus {
+    box-shadow: none;
+  }
+
+
+  .post-head{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .new-table-wrap {
+    margin: 10px 0;
+    padding: 0;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+
+  .new-table-wrap table.new-table thead.prime-blue tr th {
+    background: #f3f7ff !important;
+    color: #307ff4 !important;
+  }
+
+  .post-form-box {
+    position: relative;
+    height: auto;
+    margin: 20px 0;
+  }
+  
+  .post-form-box img {
+    position: absolute;
+    top: 35%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
+  .profile-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-upload > input#profile-upload {
+    display: none;
+  }
+
+  .prof-upload-label {
+    background-color: #f2faff;
+    color: #009eff;
+    border: 1px solid currentColor;
+    border-radius: 3.5px;
+    padding: 7px 12px;
+    cursor: pointer;
+  }
+
+  .action-space span{
+    padding: 0px 10px;
+  }
+
+  .post-img{
+    width: 100%;
+    height: 20vh;
+    object-fit: contain;
+  }
