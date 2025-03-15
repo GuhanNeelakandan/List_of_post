@@ -67,7 +67,7 @@ interface TableOption {
   
     useEffect(() => {
         if (tableOption) {
-            dispatch(fetchAllPostList(tableOption)); 
+            dispatch(fetchAllPostList(tableOption!)); 
           }
     }, [dispatch,tableOption]);
   
@@ -185,7 +185,7 @@ interface TableOption {
                 <td colSpan={5}><h6>No records available</h6></td>
               </tr>
             ) : (
-              list.map((item, idx) => (
+              list.map((item:Post, idx:number) => (
                 <tr key={idx}>
                   <td>{tableOption.skip + idx + 1}</td>
                   <td>{item?.title}</td>

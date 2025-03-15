@@ -2,10 +2,17 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { NodeURL } from '../../api/api';
 
+interface TableOption {
+    search: string;
+    skip: number;
+    limit: number;
+    fromDate: string;
+    toDate: string;
+  }
 
 export const fetchAllPostList = createAsyncThunk(
     'posts/fetchAllPostList',
-    async (tableOption, { rejectWithValue }) => {
+    async (tableOption:TableOption, { rejectWithValue }) => {
       try {
         const response = await axios.post(`${NodeURL}/get/all/post/list`, tableOption);
         if (response.data.status === 1 || response.data.status === 0) {
